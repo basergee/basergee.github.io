@@ -243,4 +243,13 @@ ul, ol {
     .right {
         left: 0%;
     }
+
+    /* Части блока раздела с опытом работы будут располагаться один под другим */
+    .job-info {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 2vw;
+        margin-bottom: 1em;
+    }
 }
