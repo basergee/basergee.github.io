@@ -1,18 +1,276 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <body>
-        <header>
-        </header>
+    <link rel="stylesheet" href="css/styles.css"/>
 
-        <main>
-            <h1>Hello</h1>
-            <p>World</p>
-        </main>
+    <title>Резюме</title>
+</head>
+<body>
+<header></header>
+<main>
+    <section>
+        <div class="author-about">
+            <img class="author-photo" src="images/avatar-1.jpg">
+            <p>Бачурин Сергей</p>
+            <p>Мужчина, 35 лет, родился
+                <text>8</text>
+                <text>октября</text>
+                <text>1987</text>
+            </p>
+            <br>
+            <p><span class="rev email">ay</span></p>
+            <p><span class="rev phone">77-1</span></p>
+            <br>
+            <p>Проживает: Нижний Тагил</p>
+        </div>
+    </section>
+    <section>
+        <button class="collapsible">Опыт работы</button>
+        <div class="collapsible-content">
+            <!-- Информация о предприятии -->
+            <div class="company-info">
+                ООО "Энергосервис "Синтур НТ" - производство генераторов электроэнергии
+            </div>
+            <div class="job-info">
+                <div class="job-timeline">
+                    <div class="timeline">
+                        <div class="container left">
+                            <div class="timeline-content">
+                                <div class="timeline-period">
+                                    05.2019 - настоящее время
+                                </div>
+                                <div class="timeline-job-title">
+                                    Ведущий инженер-программист в сервисной службе
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container right">
+                            <div class="timeline-content">
+                                <div class="timeline-period">
+                                    03.2018-05.2019
+                                </div>
+                                <div class="timeline-job-title">
+                                    Инженер-программист в сервисной службе
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container left">
+                            <div class="timeline-content">
+                                <div class="timeline-period">
+                                    01.2018-03.2018
+                                </div>
+                                <div class="timeline-job-title">
+                                    Обслуживание компьютеров и оказание технической поддержки пользователям
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <footer>
-        </footer>
-    </body>
+                <div class="job-description">
+                    <ul>
+                        <li>Консультирование по подключению новых станций к нашей системе;
+                        <li>- Поддержание всей системы в работоспособном состоянии, а также доработкой отдельных ее
+                            частей. Например:
+                            <ol>
+                                <li>электрогенератор станции приводится в движение двигателем внутреннего сгорания
+                                    (ДВС), работающим на газу. Разрабатывалась программа управления зажиганием на языке
+                                    С для разных двигателей;
+                                </li>
+                                <li>на электростанции большое количество датчиков. Показания с датчиков собирает
+                                    микроконтроллер для отправки дальше в систему управления. Дорабатывал программу
+                                    сбора данных для обработки показаний разработанного на предприятии датчика наличия
+                                    воды в масле;
+                                </li>
+                                <li>также делались прототипы приложений для телефонов на базе Android для
+                                    визуализации некоторых параметров работы электростанции;
+                                </li>
+                            </ol>
+                        </li>
+                        <li>Взаимодействие с наладчиками оборудования по вопросам подключения компьютеров,
+                            ноутбуков в нашу общую систему;
+                        </li>
+                        <li>Принятие заявок и входящих звонков по вопросам отклонения работы системы управления, решение
+                            задач с претензиями клиентов;
+                        </li>
+                        <li>Распределение задач между сотрудниками отдела (в подчинении 2 сотрудника)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Информация о предприятии -->
+            <div class="company-info">
+                ОАО "ЕВРАЗ НТМК"
+            </div>
+            <div class="job-info">
+                <div class="job-timeline">
+                    <div class="timeline">
+                        <div class="container left">
+                            <div class="timeline-content">
+                                <div class="timeline-period">
+                                    10.2014 - 12.2016
+                                </div>
+                                <div class="timeline-job-title">
+                                    Инженер по наладке и испытаниям 1 категории лаборатории гидроприводов центральной
+                                    лаборатории механизации комбината (ЦЛМК) управления главного механика
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container right">
+                            <div class="timeline-content">
+                                <div class="timeline-period">
+                                    02.2014 - 10.2014
+                                </div>
+                                <div class="timeline-job-title">
+                                    Инженер-электроник 2 категории (по наладке станков с числовым программным
+                                    управлением)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container left">
+                            <div class="timeline-content">
+                                <div class="timeline-period">
+                                    04.2013 - 02.2014
+                                </div>
+                                <div class="timeline-job-title">
+                                    Инженер-электроник без категории службы по электрохозяйству управления главного
+                                    механика
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-description">
+                    <ul>
+                        <li>Работа с подрядными организациями: показывал оборудование перед отправкой на ремонт, отвечал
+                            на вопросы, обеспечивал документацией;
+                        </li>
+
+                        <li>Участие в приемке оборудования после ремонта или модернизации;</li>
+                        <li>Коррекция бюджетов цехов на ремонты оборудования, по заданию руководителей
+                            (неформальному).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <button class="collapsible">Образование</button>
+        <div class="collapsible-content education">
+            Федеральное государственное автономное образовательное учреждение
+            высшего профессионального образования "Уральский федеральный университет имени первого Президента
+            России Б.Н.Ельцина" (очная форма)
+        </div>
+    </section>
+
+    <section>
+        <button class="collapsible">Повышение квалификации, курсы</button>
+        <div class="collapsible-content">
+            <ul>
+                <li class="resume-education">
+                    <span class="resume-education__name">Онлайн-школа</span>
+                    <p class="bloko-form-hint">2023</p>
+                </li>
+                <p>SkillFactory, "Fullstack разработчик на Python"</p>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <button class="collapsible">Ключевые навыки</button>
+        <div class="collapsible-content">
+            <ul>
+                <li class="resume-skils">
+                    <span class="bloko-form-hint">Знание языков</span>
+                    <ul class="resume-skils__item">
+                        <li>Русский<span class="info"> — Родной</span></li>
+                        <li>Английский<span class="info"> — C1 — Продвинутый</span></li>
+                    </ul>
+                </li>
+                <li class="resume-skils">
+                    <span class="bloko-form-hint">Навыки</span>
+                    <p class="resume-skils__item"><span>Исполнительность</span></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <button class="collapsible">Дополнительная информация</button>
+        <div class="collapsible-content">
+            <a href="https://github.com/basergee">Ссылка на профиль на Github</a>
+            <br>Прохожу курс в Онлайн-школе SkillFactory, курс <a
+                href="https://skillfactory.ru/python-fullstack-web-developer">"Fullstack разработчик на Python"</a>
+            <br>Обучение с 01.2022 по 03.2023.
+            <br>В рамках курса были пройдены основы языка Python, функциональное и объектно-ориентированное
+            программирование на Python.
+            Было создано два приложения-игры.
+            <br>Часть, посвященную backend-разработке, приведу из программы курса:
+            <ul>
+                <li>- модели;</li>
+                <li>- представления и шаблоны;</li>
+                <li>- фильтры и формы;</li>
+                <li>- авторизация и регистрация;</li>
+                <li>- работа с почтой и выполнение задач по расписанию;</li>
+                <li>- работа с асинхронными задачами через celery;</li>
+                <li>- кэширование;</li>
+                <li>- качество кода;</li>
+                <li>- безопасность;</li>
+                <li>- управляющие команды и настройка админки;</li>
+                <li>- работа с PostgreSQL;</li>
+                <li>- локализация и интернационализация;</li>
+                <li>- REST архитектура.</li>
+            </ul>
+            <br>Было несколько проектов. Например, для изучения работы с публичными API сервисов создавался телеграм-бот
+            для
+            пересчета суммы в одной валюте в другую валюту по курсу на момент запроса.
+            <br>
+            <br>Личностные качества: высокая ответственность, стремление решать задачи с минимальными трудозатратами, но
+            эффективно.
+            Анализирую задачи перед выполнением.
+        </div>
+    </section>
+</main>
+<footer></footer>
+
+<script>
+        let coll = document.getElementsByClassName("collapsible");
+        let i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                let content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    /* Добавим 300 пикселей, потому, что при развертывании иногда
+                    содержимое не помещается. */
+                    content.style.maxHeight = content.scrollHeight + 300 + "px";
+                }
+            });
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
 </html>

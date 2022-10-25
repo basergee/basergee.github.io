@@ -1,0 +1,246 @@
+
+@font-face {
+    src: url('./fonts/RobotoSlab-VariableFont_wght.ttf');
+    font-family: "RobotoSlab";
+}
+
+/* Обнулим рамки */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --color-a: #85d46d; /* зеленоватый */
+    --color-b: #d46d85; /* красноватый */
+    --color-c: #d4946d; /* кремовый коричневый */
+    --color-d: #6d9dd4; /* синесерый */
+}
+
+body {
+    font-family: "RobotoSlab";
+}
+
+header, footer {
+    background-color: var(--color-a);
+    padding: 2em;
+}
+
+.author-about {
+    margin: 1em 0;
+}
+
+.author-photo {
+    float: left;
+    margin: 0em 2em 1em;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+}
+
+/* На всякий случай разместим адрес электронной почты и номер телефона не открыты текстом.
+ Источник решения: https://security.stackexchange.com/a/240531 */
+span.rev { unicode-bidi:bidi-override; direction:rtl }
+span.rev.email:before { content:"ur.xedn" }
+span.rev.email:after { content:"@6102yegres.niru4ab :liamE" }
+span.rev.phone:before { content:"94-79-3" }
+span.rev.phone:after { content:"69-7+ :enohP" }
+
+
+/* Разворачивающиеся заголовки */
+
+.collapsible {
+  background-color: var(--color-b); /* #777;*/
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.collapsible-content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+.active, .collapsible:hover {
+  background-color: #bb3b59; /* #555; */
+}
+
+/* Для раздела "Опыт работы" */
+
+.company-info {
+    /*margin: 3px;*/
+    padding: 2em auto;
+    font-size: 2em;
+}
+
+.job-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 2vw;
+    margin-bottom: 1em;
+}
+
+.job-timeline {
+    background-color: var(--color-d); /* blue; */
+    border-radius: 0.5em;
+}
+
+.job-description {
+    /*--my-text-color: black;
+    background-color: white;
+    color: var(--my-text-color);*/
+}
+
+.timeline-job-title {
+    margin: 0.3em;
+}
+
+/* точки в списках выходят за границы блоков, поэтому сдвигаем их */
+ul, ol {
+  list-style-position: inside;
+  padding: 0;
+}
+
+/* Timeline */
+
+/* Область для timeline */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Вертикальная белая линия */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Контейнер для текста */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* Кружок */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Левый контейнер -- слева от линии timeline */
+.left {
+    left: 0;
+}
+
+/* Правый контейнер -- справа от линии timeline */
+.right {
+    left: 50%;
+}
+
+/* Стрелка левого контейнера */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Стрелка правого контейнера */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Кружок правого контейнера */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.timeline-content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+.timeline-period {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.timeline-period-description {
+}
+
+/* При уменьшении экрана timeline изменяет вид.  */
+@media screen and (max-width: 1000px) {
+    /* Линия с кржочками будет слева */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Контейнеры занимают всю область */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Размещает стрелочки */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Размещает кружки */
+    .left::after, .right::after {
+        left: 15px;
+    }
+
+    /* Все контейнеры с текстом размещаются справа от линии */
+    .right {
+        left: 0%;
+    }
+}
